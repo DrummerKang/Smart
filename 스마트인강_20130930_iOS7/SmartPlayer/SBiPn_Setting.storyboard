@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="pFP-IK-QS2">
+    <dependencies>
+        <deployment defaultVersion="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Mg SettionVC-->
+        <scene sceneID="PQT-tE-3Ak">
+            <objects>
+                <viewController storyboardIdentifier="mgSettionVC" id="pFP-IK-QS2" customClass="mgSettionVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bq2-xV-ktc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" id="Q2H-dW-sKa">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <items>
+                                    <navigationItem title="설정" id="HFG-Vg-Sdk"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LMh-ht-UFh">
+                                <rect key="frame" x="5" y="20" width="46" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" backgroundImage="btn_top_menu_normal.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="btn_top_menu_pressed.png"/>
+                                <connections>
+                                    <action selector="menuBtn:" destination="pFP-IK-QS2" eventType="touchUpInside" id="hCJ-GF-vWs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="settingNavigationBar" destination="Q2H-dW-sKa" id="lGP-Z3-Lwj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dU2-2p-twX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1928" y="2565"/>
+        </scene>
+        <!--Mg Alim ConfigVC-->
+        <scene sceneID="7Gl-u0-ZUT">
+            <objects>
+                <viewController storyboardIdentifier="mgAlimConfigVC" id="NDY-Ia-MsN" customClass="mgAlimConfigVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xcj-nG-BP2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="table5.png" id="Qvv-7G-vn0">
+                                <rect key="frame" x="6" y="72" width="308" height="231"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="pmO-ZC-lmo">
+                                <rect key="frame" x="251" y="80" width="51" height="31"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="22" maxX="0.0" maxY="-22"/>
+                                <connections>
+                                    <action selector="toggleUsageAnsAlarm:" destination="NDY-Ia-MsN" eventType="valueChanged" id="PqZ-uJ-tWf"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Pky-nK-vqk">
+                                <rect key="frame" x="251" y="126" width="51" height="31"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="19" maxX="0.0" maxY="-19"/>
+                                <connections>
+                                    <action selector="toggleUsageMsgAlarm:" destination="NDY-Ia-MsN" eventType="valueChanged" id="uiv-ln-8ZS"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Hs6-8i-NUA">
+                                <rect key="frame" x="251" y="171" width="51" height="31"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="16" maxX="0.0" maxY="-16"/>
+                                <connections>
+                                    <action selector="toggleUsageProgAlarm:" destination="NDY-Ia-MsN" eventType="valueChanged" id="ybD-un-9ZY"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="gB1-La-v6F">
+                                <rect key="frame" x="251" y="217" width="51" height="31"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="14" maxX="0.0" maxY="-14"/>
+                                <connections>
+                                    <action selector="toggleUsageLecEndAlarm:" destination="NDY-Ia-MsN" eventType="valueChanged" id="wrO-hH-24V"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="bEn-Mb-lYr">
+                                <rect key="frame" x="251" y="264" width="51" height="31"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="13" maxX="0.0" maxY="-13"/>
+                                <connections>
+                                    <action selector="toggleUsageLecInfoAlarm:" destination="NDY-Ia-MsN" eventType="valueChanged" id="e0p-Zn-0Za"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="답변 알림" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I4I-Xe-qlp">
+                                <rect key="frame" x="22" y="73" width="122" height="46"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="쪽지 알림" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fC6-T7-MtX">
+                                <rect key="frame" x="22" y="119" width="112" height="46"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="18" maxX="0.0" maxY="-18"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="진도율 알림" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wFf-y5-ynW">
+                                <rect key="frame" x="22" y="164" width="125" height="46"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="16" maxX="0.0" maxY="-16"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="강좌 종료일 알림" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="B3Q-6l-6na">
+                                <rect key="frame" x="22" y="210" width="154" height="46"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="14" maxX="0.0" maxY="-14"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="수강 정보 알림" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0q5-js-68g">
+                                <rect key="frame" x="22" y="256" width="147" height="47"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="12" maxX="0.0" maxY="-12"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" id="yzJ-S8-wdV">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <items>
+                                    <navigationItem title="알림설정" id="94d-CI-r0K"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="55D-Ey-BxV">
+                                <rect key="frame" x="5" y="20" width="46" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="btn_top_prev_normal.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="btn_top_prev_pressed.png"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="NDY-Ia-MsN" eventType="touchUpInside" id="HSt-qB-2nv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="_swUsageAnsAlarm" destination="pmO-ZC-lmo" id="zvN-Cr-S8T"/>
+                        <outlet property="_swUsageLecEndAlarm" destination="gB1-La-v6F" id="9VU-tn-aGV"/>
+                        <outlet property="_swUsageLecInfoAlarm" destination="bEn-Mb-lYr" id="UPq-ei-yML"/>
+                        <outlet property="_swUsageMsgAlarm" destination="Pky-nK-vqk" id="RDt-nk-mDj"/>
+                        <outlet property="_swUsageProgAlarm" destination="Hs6-8i-NUA" id="wxz-rI-rie"/>
+                        <outlet property="alimNavigationBar" destination="yzJ-S8-wdV" id="u2o-cd-oEF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JNw-Eh-deV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1417" y="2565"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_top_menu_normal.png" width="46" height="44"/>
+        <image name="btn_top_menu_pressed.png" width="46" height="44"/>
+        <image name="btn_top_prev_normal.png" width="46" height="44"/>
+        <image name="btn_top_prev_pressed.png" width="46" height="44"/>
+        <image name="table5.png" width="308" height="231"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

@@ -1,0 +1,26 @@
+//
+//  NSDataExtentions.h
+//  Gorealra
+//
+//  Created by Michael Lee on 10. 11. 24..
+//  Copyright 2010 AppGate. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+
+
+@interface NSData (NSDataExtentions)
++ (NSData *) decodeBase64WithString:(NSString *)strBase64 ;
++ (NSData *) dataWithBase64EncodedString:(NSString *) string;
+- (id) initWithBase64EncodedString:(NSString *) string;
+
+- (NSString *) base64Encoding;
+- (NSString *) base64EncodingWithLineLength:(NSUInteger) lineLength;
+
+- (BOOL) hasPrefix:(NSData *) prefix;
+- (BOOL) hasPrefixBytes:(const void *) prefix length:(NSUInteger) length;
+
+- (BOOL) hasSuffix:(NSData *) suffix;
+- (BOOL) hasSuffixBytes:(const void *) suffix length:(NSUInteger) length;
+@end
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="WMg-C4-qhb">
+    <dependencies>
+        <deployment defaultVersion="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Mg MessageVC i Pad-->
+        <scene sceneID="yIl-23-EDo">
+            <objects>
+                <viewController id="WMg-C4-qhb" customClass="mgMessageVC_iPad" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YKW-6P-wcL">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="ftG-RI-Yl3" customClass="mgMessageScrollView">
+                                <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                            </scrollView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="img_nomessage.png" id="bM2-AW-6YG">
+                                <rect key="frame" x="815" y="70" width="189" height="202"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" id="0dj-XM-gXI">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="19" maxX="0.0" maxY="-19"/>
+                                <items>
+                                    <navigationItem title="마이톡" id="a1c-Fr-f6w">
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="faB-VG-wmk">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aRf-M2-tl5">
+                                                <rect key="frame" x="948" y="7" width="60" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                <state key="normal" title="쪽지쓰기" backgroundImage="btn_top_normal.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted" backgroundImage="btn_top_pressed.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="popoverSendMessageVC:" destination="WMg-C4-qhb" eventType="touchUpInside" id="40X-nW-FYd"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="350" height="480"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="_messageSV" destination="ftG-RI-Yl3" id="bMF-mI-Gg9"/>
+                        <outlet property="navigationBar" destination="0dj-XM-gXI" id="3vD-pl-OVg"/>
+                        <outlet property="noBgImage" destination="bM2-AW-6YG" id="lIe-Fl-jAz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xV5-fs-2VL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188" y="-672"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_top_normal.png" width="60" height="31"/>
+        <image name="btn_top_pressed.png" width="60" height="31"/>
+        <image name="img_nomessage.png" width="378" height="404"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

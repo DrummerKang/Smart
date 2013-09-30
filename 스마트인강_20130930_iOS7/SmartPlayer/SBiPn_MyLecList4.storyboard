@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="f51-ks-pbb">
+    <dependencies>
+        <deployment defaultVersion="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Mg My Lec ListTVC - 수강중인강좌-->
+        <scene sceneID="Kf6-OK-dZ9">
+            <objects>
+                <viewController storyboardIdentifier="mgMyLecListTVC" id="f51-ks-pbb" customClass="mgMyLecListTVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ntq-Fa-Qzc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="_bg_LecDetailHeader.png" id="qbN-yX-OIY" userLabel="배경">
+                                <rect key="frame" x="0.0" y="64" width="320" height="148"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" image="thumb_noimg.png" id="kAM-2Y-P6s" userLabel="선생님얼굴">
+                                <rect key="frame" x="17" y="82" width="52" height="52"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="R3v-kY-oX9" userLabel="과목아이콘">
+                                <rect key="frame" x="6" y="70" width="41" height="40"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qWZ-lu-UpD" userLabel="선생님 이름">
+                                <rect key="frame" x="80" y="82" width="80" height="20"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="TopLeft" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AtD-WO-Nf6" userLabel="강좌 제목">
+                                <rect key="frame" x="80" y="105" width="220" height="38"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" image="_btn_freeLec.png" id="Ewj-V1-64O" userLabel="다음버튼">
+                                <rect key="frame" x="159" y="83" width="45" height="16"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NN8-RW-hIo" userLabel="강좌유형">
+                                <rect key="frame" x="68" y="154" width="70" height="12"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="17" maxX="0.0" maxY="-17"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vr1-cV-8F8" userLabel="강좌구성">
+                                <rect key="frame" x="68" y="168" width="70" height="12"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="15" maxX="0.0" maxY="-15"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zWb-y5-lmW" userLabel="제작상태">
+                                <rect key="frame" x="68" y="183" width="70" height="12"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="16" maxX="0.0" maxY="-16"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0Yj-3A-qIw" userLabel="시작일">
+                                <rect key="frame" x="187" y="154" width="118" height="12"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="17" maxX="0.0" maxY="-17"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I7E-QY-GA2" userLabel="종료일">
+                                <rect key="frame" x="187" y="168" width="116" height="12"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="15" maxX="0.0" maxY="-15"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YAL-8b-yUw" userLabel="나의진도">
+                                <rect key="frame" x="200" y="183" width="104" height="12"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="15" maxX="0.0" maxY="-15"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                <color key="textColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bMb-kA-hSr" customClass="mgTableView">
+                                <rect key="frame" x="0.0" y="212" width="320" height="356"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="downloadListCell" rowHeight="156" id="5n4-N5-sUT">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="156"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5n4-N5-sUT" id="TYE-4l-89d">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="156"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" tag="7" contentMode="scaleToFill" image="_bg_cell_LecDetail.png" id="tMX-Zl-Q66" userLabel="셀배경">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="156"/>
+                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="8" contentMode="scaleToFill" image="_bg_cell_LecDetail_select.png" id="8ZK-Lg-Z4r" userLabel="셀배경2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="156"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="SUBJECT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tiX-pf-39R" userLabel="강좌이름">
+                                                    <rect key="frame" x="10" y="11" width="294" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="최종수강일" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eiL-Cd-gQe">
+                                                    <rect key="frame" x="10" y="33" width="74" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="9999-99-99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mLL-aE-san" userLabel="수강일 날짜">
+                                                    <rect key="frame" x="78" y="33" width="83" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                    <color key="textColor" red="0.039215686270000001" green="0.38823529410000002" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="_btn_icon_SD.png" id="dtA-hV-cZT">
+                                                    <rect key="frame" x="112" y="70" width="26" height="16"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="_btn_icon_HD.png" id="Wvu-QH-tYe">
+                                                    <rect key="frame" x="112" y="113" width="26" height="16"/>
+                                                </imageView>
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="osX-rn-ekA" userLabel="SD Play">
+                                                    <rect key="frame" x="144" y="64" width="78" height="29"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                                    <state key="normal" backgroundImage="btn_lec_play.png">
+                                                        <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="201-Zd-3ML" userLabel="SD Down">
+                                                    <rect key="frame" x="226" y="64" width="78" height="30"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" backgroundImage="btn_lec_down.png">
+                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="sdDownBtn:" destination="f51-ks-pbb" eventType="touchUpInside" id="a5O-Ss-bGX"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KVY-Hc-tDs" userLabel="HD Play">
+                                                    <rect key="frame" x="144" y="106" width="78" height="29"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" backgroundImage="btn_lec_play.png">
+                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Ot-qD-oQT" userLabel="HD Down">
+                                                    <rect key="frame" x="226" y="106" width="78" height="29"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                                    <state key="normal" backgroundImage="btn_lec_down.png">
+                                                        <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="hdDownBtn:" destination="f51-ks-pbb" eventType="touchUpInside" id="MHR-ZB-n0F"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="/ 수강시간 :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="27G-PW-YNh">
+                                                    <rect key="frame" x="162" y="33" width="70" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="9" contentMode="left" text="100분" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fV8-bC-xLr">
+                                                    <rect key="frame" x="232" y="33" width="45" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                    <color key="textColor" red="0.039215686270000001" green="0.38823529410000002" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="pcCell" rowHeight="116" id="6gP-kV-9ZF">
+                                        <rect key="frame" x="0.0" y="178" width="320" height="116"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6gP-kV-9ZF" id="MPd-Kv-5C7">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="con_box7.png" id="uWC-FG-Ie6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="116"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="SUBJECT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bD8-Kj-YWx">
+                                                    <rect key="frame" x="10" y="11" width="294" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="최종수강일" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qBT-s4-aCJ">
+                                                    <rect key="frame" x="10" y="33" width="74" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="9999-99-99" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rLo-U6-4xf">
+                                                    <rect key="frame" x="78" y="33" width="83" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                    <color key="textColor" red="0.039215686270000001" green="0.38823529410000002" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="PC 전용 강좌입니다." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gyO-du-lUD">
+                                                    <rect key="frame" x="21" y="58" width="290" height="43"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                    <color key="textColor" red="0.56078431370000004" green="0.64313725489999995" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="/ 수강시간 :" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UKH-XM-hnh">
+                                                    <rect key="frame" x="162" y="33" width="70" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="9" contentMode="left" text="100분" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rB2-91-mhY">
+                                                    <rect key="frame" x="232" y="33" width="45" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                    <color key="textColor" red="0.039215686270000001" green="0.38823529410000002" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="f51-ks-pbb" id="XCu-1m-PMM"/>
+                                    <outlet property="delegate" destination="f51-ks-pbb" id="mrr-dg-oI1"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GId-bI-RO1" userLabel="강좌질문">
+                                <rect key="frame" x="30" y="509" width="114" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" backgroundImage="btn_subview_qna.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Vjm-zp-QIV" kind="push" identifier="qna" id="Gw7-J4-mrI"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tVT-6w-uoP" userLabel="다운로드">
+                                <rect key="frame" x="146" y="509" width="44" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" backgroundImage="btn_view_down.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadingBtn:" destination="f51-ks-pbb" eventType="touchUpInside" id="eir-f5-hM5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eAo-g2-GXy" userLabel="닫기버튼">
+                                <rect key="frame" x="0.0" y="509" width="28" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" backgroundImage="btn_subview_close.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="move2Btn:" destination="f51-ks-pbb" eventType="touchUpInside" id="htK-Uw-TPp"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wpu-Db-zb0" userLabel="열기버튼">
+                                <rect key="frame" x="0.0" y="509" width="28" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="btn_subview_open.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="moveBtn:" destination="f51-ks-pbb" eventType="touchUpInside" id="8b2-Xt-0QF"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" id="UQ1-rv-KHT">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <items>
+                                    <navigationItem title="수강중인강좌" id="gLL-M6-Tse"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9Vo-ua-LAv">
+                                <rect key="frame" x="255" y="27" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <state key="normal" title="질문하기" backgroundImage="btn_top_normal.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="btn_top_pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="qnaBtn:" destination="f51-ks-pbb" eventType="touchUpInside" id="HHQ-zC-sIr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9LB-GJ-z8Z">
+                                <rect key="frame" x="5" y="20" width="46" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="btn_top_prev_normal.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="btn_top_prev_pressed.png"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="f51-ks-pbb" eventType="touchUpInside" id="DDT-WP-r75"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="수강중인강좌" id="nKG-d0-mL6"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="downloadBtn" destination="tVT-6w-uoP" id="rvI-or-Bff"/>
+                        <outlet property="downloadListTable" destination="bMb-kA-hSr" id="Llp-Bg-68V"/>
+                        <outlet property="freeLecture" destination="Ewj-V1-64O" id="O8b-4T-URs"/>
+                        <outlet property="lecEndDay" destination="I7E-QY-GA2" id="57r-tq-Tht"/>
+                        <outlet property="lecListNavigationBar" destination="UQ1-rv-KHT" id="3je-tI-vyL"/>
+                        <outlet property="lecMake" destination="zWb-y5-lmW" id="qVC-Nl-Dvj"/>
+                        <outlet property="lecNm" destination="NN8-RW-hIo" id="EZa-1x-d5w"/>
+                        <outlet property="lecOgz" destination="vr1-cV-8F8" id="BV5-uh-sny"/>
+                        <outlet property="lecProgress" destination="YAL-8b-yUw" id="5Ce-9K-OOR"/>
+                        <outlet property="lecQuestionBtn" destination="GId-bI-RO1" id="QGb-16-iqW"/>
+                        <outlet property="lecStartDay" destination="0Yj-3A-qIw" id="61d-0Z-MEm"/>
+                        <outlet property="move2Btn" destination="eAo-g2-GXy" id="hs1-I4-9zb"/>
+                        <outlet property="moveBtn" destination="Wpu-Db-zb0" id="OGo-nf-fz8"/>
+                        <outlet property="subjectImage" destination="R3v-kY-oX9" id="zLI-Om-Ugk"/>
+                        <outlet property="teacherName" destination="qWZ-lu-UpD" id="iSU-W6-Vp2"/>
+                        <outlet property="teacherPhoto" destination="kAM-2Y-P6s" id="XhK-Jp-R29"/>
+                        <outlet property="titleName" destination="AtD-WO-Nf6" id="gmz-Rl-I6U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6nl-M4-4vB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-257" y="28"/>
+        </scene>
+        <!--Mg Ask Lec WriteVC - 질문하기-->
+        <scene sceneID="207-Lr-ZxU">
+            <objects>
+                <viewController storyboardIdentifier="mgAskLecWriteVC" id="Kxp-EU-iWY" customClass="mgAskLecWriteVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SyH-PU-0WJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="htO-HZ-E0z">
+                                <rect key="frame" x="15" y="150" width="290" height="138"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="_bg_qna_title.png" id="Dqe-h2-ES1">
+                                <rect key="frame" x="0.0" y="64" width="320" height="40"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JxC-8A-TPG">
+                                <rect key="frame" x="15" y="73" width="290" height="22"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="질문 대상을 선택해 주세요." minimumFontSize="17" id="17f-HE-4gm" customClass="mgTextField">
+                                <rect key="frame" x="15" y="110" width="290" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <segue destination="r8g-gC-42g" kind="modal" identifier="selectLectureIndex" id="DGa-oL-dmG"/>
+                                </connections>
+                            </textField>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" id="X1F-J7-ZEf" customClass="mgImageV">
+                                <rect key="frame" x="240" y="155" width="60" height="60"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" id="nWu-n3-kes">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <items>
+                                    <navigationItem title="질문하기" id="q23-5u-KB7"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0fT-NT-dkO">
+                                <rect key="frame" x="5" y="20" width="46" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="btn_top_prev_normal.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="btn_top_prev_pressed.png"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="Kxp-EU-iWY" eventType="touchUpInside" id="br1-vG-LJu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="질문하기" id="j1x-yX-fdg"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="_imageV" destination="X1F-J7-ZEf" id="tM6-vS-AGy"/>
+                        <outlet property="_imgTextViewBG" destination="htO-HZ-E0z" id="juH-dF-Kff"/>
+                        <outlet property="_lblLecture" destination="JxC-8A-TPG" id="oc4-1P-YQP"/>
+                        <outlet property="_tfLectureIndex" destination="17f-HE-4gm" id="tFh-AZ-5Eh"/>
+                        <outlet property="askNavigationBar" destination="nWu-n3-kes" id="67E-T8-GJi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bne-fB-J4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="183"/>
+        </scene>
+        <!--Mg Ask Lec Write OptVC-->
+        <scene sceneID="kJq-LF-DxL">
+            <objects>
+                <viewController id="r8g-gC-42g" customClass="mgAskLecWriteOptVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y9F-Mz-XXt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3bM-bZ-pbv">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.82745098039999998" green="0.90588235289999997" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cellLectureIndex" rowHeight="55" id="zcY-hl-6gf">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="55"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zcY-hl-6gf" id="Ovu-bN-M0E">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cellList02.png" id="gez-1G-DmR">
+                                                    <rect key="frame" x="0.0" y="54" width="320" height="1"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="강의 제목" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oJS-RZ-zbd">
+                                                    <rect key="frame" x="15" y="3" width="250" height="50"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fwn-PN-i4a">
+                                                    <rect key="frame" x="20" y="6" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wie-AL-HcD">
+                                                    <rect key="frame" x="70" y="6" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QRV-C6-14U">
+                                                    <rect key="frame" x="283" y="17" width="22" height="22"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" backgroundImage="_btn_check_off.png">
+                                                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="selected" backgroundImage="_btn_check_on.png"/>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="touchLecture:" destination="r8g-gC-42g" eventType="touchUpInside" id="1kv-VC-TLl"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.82745098039999998" green="0.90588235289999997" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="r8g-gC-42g" id="8Yw-Uo-8Vf"/>
+                                    <outlet property="delegate" destination="r8g-gC-42g" id="8Du-EY-MYZ"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" id="DvT-LU-b50">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="19" maxX="0.0" maxY="-19"/>
+                                <items>
+                                    <navigationItem title="대상선택" id="wuV-1h-Nau"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82745098039999998" green="0.90588235289999997" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qVT-ZQ-ESE"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="_nbNavigation" destination="DvT-LU-b50" id="B1g-d4-wyu"/>
+                        <outlet property="_table" destination="3bM-bZ-pbv" id="h9Q-nU-Snn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evT-Zr-mdo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="870" y="183"/>
+        </scene>
+        <!--Mg Ask LecVC - 강의 질문/답변-->
+        <scene sceneID="0qd-mz-zB5">
+            <objects>
+                <viewController id="Vjm-zp-QIV" customClass="mgAskLecVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SUK-UD-k46">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="Ay7-Th-SMd">
+                                <rect key="frame" x="0.0" y="64" width="320" height="40"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qX4-Tw-ovz">
+                                <rect key="frame" x="12" y="70" width="142" height="36"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="내 질문" backgroundImage="tab_normal.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="내 질문" backgroundImage="tab_pressed.png">
+                                    <color key="titleColor" red="0.20784313730000001" green="0.25882352939999997" blue="0.36470588240000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="myQnaBtn:" destination="Vjm-zp-QIV" eventType="touchUpInside" id="60t-tO-p5L"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="D1J-GF-PPL">
+                                <rect key="frame" x="165" y="70" width="142" height="36"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="전체 질문" backgroundImage="tab_normal.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="전체 질문" backgroundImage="tab_pressed.png">
+                                    <color key="titleColor" red="0.16078431369999999" green="0.21960784310000001" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="allQnaBtn:" destination="Vjm-zp-QIV" eventType="touchUpInside" id="CNf-CW-eJn"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="67" sectionHeaderHeight="22" sectionFooterHeight="22" id="cij-mf-aP4">
+                                <rect key="frame" x="0.0" y="104" width="320" height="464"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="askLecCell" selectionStyle="blue" indentationWidth="10" reuseIdentifier="myQnaAnsCell" rowHeight="67" id="o1l-9P-7wP">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="67"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o1l-9P-7wP" id="0Kp-bI-3hL">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cellList.png" id="StG-ev-Aq9">
+                                                    <rect key="frame" x="0.0" y="66" width="320" height="1"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="제목" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gVH-Tv-lTu">
+                                                    <rect key="frame" x="53" y="15" width="253" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                    <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="홍길동" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kxa-Oj-Tix">
+                                                    <rect key="frame" x="53" y="38" width="50" height="15"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                    <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" id="ig0-ld-UxM">
+                                                    <rect key="frame" x="15" y="15" width="31" height="18"/>
+                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="ico_click.png" id="hDC-ue-iyu">
+                                                    <rect key="frame" x="300" y="30" width="8" height="9"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" tag="5" contentMode="scaleToFill" image="_icon_waitAnswer.png" id="xfq-Tb-0Lg">
+                                                    <rect key="frame" x="257" y="37" width="48" height="18"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" text="yyyy-MM-dd" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pj2-Da-D5Q">
+                                                    <rect key="frame" x="94" y="38" width="83" height="15"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                    <color key="textColor" red="0.039215686270000001" green="0.38823529410000002" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9uF-vS-xiY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                                                    <state key="normal" backgroundImage="clean_nor.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted" backgroundImage="clean_sel.png"/>
+                                                    <connections>
+                                                        <action selector="cellSelectedBtn:" destination="Vjm-zp-QIV" eventType="touchUpInside" id="Vil-AK-gDD"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Vjm-zp-QIV" id="vhf-Zg-liy"/>
+                                    <outlet property="delegate" destination="Vjm-zp-QIV" id="rhj-f2-E84"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cDX-Eg-OCx">
+                                <rect key="frame" x="30" y="509" width="114" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="btn_subview_leclist.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="lecBackBtn:" destination="Vjm-zp-QIV" eventType="touchUpInside" id="ukU-cy-BTk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iMT-wL-v6k" userLabel="닫기버튼">
+                                <rect key="frame" x="0.0" y="509" width="28" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="btn_subview_close.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="moveCloseBtn:" destination="Vjm-zp-QIV" eventType="touchUpInside" id="bgy-Kl-a40"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qpi-ZF-TdJ" userLabel="열기버튼">
+                                <rect key="frame" x="0.0" y="509" width="28" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="btn_subview_open.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="moveOpenBtn:" destination="Vjm-zp-QIV" eventType="touchUpInside" id="Z0D-3H-BMr"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5RA-3r-3UN" userLabel="다운로드">
+                                <rect key="frame" x="146" y="509" width="44" height="44"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" backgroundImage="btn_view_down.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="downloadBtn:" destination="Vjm-zp-QIV" eventType="touchUpInside" id="ZQC-ju-LqR"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="img_noquestion.png" id="AuM-2t-txp">
+                                <rect key="frame" x="124" y="118" width="187" height="203"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" id="UDf-y8-Sz7">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <items>
+                                    <navigationItem title="강의 질문/답변" id="KAi-Uk-Zdp"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TbY-1N-PrH">
+                                <rect key="frame" x="5" y="20" width="46" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" backgroundImage="btn_top_prev_normal.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="btn_top_prev_pressed.png"/>
+                                <connections>
+                                    <action selector="backBtn:" destination="Vjm-zp-QIV" eventType="touchUpInside" id="pwp-9V-HnU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="강의 질문/답변" id="du8-si-KiD">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Mfo-FN-0je">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2uJ-7h-9VG">
+                                <rect key="frame" x="244" y="7" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <state key="normal" title="질문하기" backgroundImage="btn_top_normal.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="btn_top_pressed.png"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="_imgBack1" destination="Ay7-Th-SMd" id="qpU-hT-6yE"/>
+                        <outlet property="allQnaBtn" destination="D1J-GF-PPL" id="TJW-iN-1Xu"/>
+                        <outlet property="askLecTable" destination="cij-mf-aP4" id="X7T-aw-KYk"/>
+                        <outlet property="askListNavigationBar" destination="UDf-y8-Sz7" id="bVV-qm-H4x"/>
+                        <outlet property="bgNoImage" destination="AuM-2t-txp" id="JlN-lX-4QO"/>
+                        <outlet property="downloadBtn" destination="5RA-3r-3UN" id="dkE-UU-6Xm"/>
+                        <outlet property="lecBackBtn" destination="cDX-Eg-OCx" id="GVR-Sf-ZZL"/>
+                        <outlet property="moveCloseBtn" destination="iMT-wL-v6k" id="VCd-re-Sbx"/>
+                        <outlet property="moveOpenBtn" destination="qpi-ZF-TdJ" id="UWx-PM-iWK"/>
+                        <outlet property="myQnaBtn" destination="qX4-Tw-ovz" id="CtY-4o-tq3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9S6-fW-y1i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="462" y="-499"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="_bg_LecDetailHeader.png" width="320" height="148"/>
+        <image name="_bg_cell_LecDetail.png" width="320" height="156"/>
+        <image name="_bg_cell_LecDetail_select.png" width="320" height="156"/>
+        <image name="_bg_qna_title.png" width="320" height="44"/>
+        <image name="_btn_check_off.png" width="44" height="44"/>
+        <image name="_btn_check_on.png" width="44" height="44"/>
+        <image name="_btn_freeLec.png" width="45" height="16"/>
+        <image name="_btn_icon_HD.png" width="26" height="16"/>
+        <image name="_btn_icon_SD.png" width="26" height="16"/>
+        <image name="_icon_waitAnswer.png" width="47" height="17"/>
+        <image name="btn_lec_down.png" width="154" height="56"/>
+        <image name="btn_lec_play.png" width="154" height="56"/>
+        <image name="btn_subview_close.png" width="27" height="43"/>
+        <image name="btn_subview_leclist.png" width="230" height="86"/>
+        <image name="btn_subview_open.png" width="27" height="43"/>
+        <image name="btn_subview_qna.png" width="230" height="86"/>
+        <image name="btn_top_normal.png" width="60" height="31"/>
+        <image name="btn_top_pressed.png" width="60" height="31"/>
+        <image name="btn_top_prev_normal.png" width="46" height="44"/>
+        <image name="btn_top_prev_pressed.png" width="46" height="44"/>
+        <image name="btn_view_down.png" width="86" height="86"/>
+        <image name="cellList.png" width="640" height="2"/>
+        <image name="cellList02.png" width="640" height="4"/>
+        <image name="clean_nor.png" width="20" height="20"/>
+        <image name="clean_sel.png" width="768" height="381"/>
+        <image name="con_box7.png" width="320" height="116"/>
+        <image name="ico_click.png" width="16" height="18"/>
+        <image name="img_noquestion.png" width="187" height="203"/>
+        <image name="tab_normal.png" width="142" height="35"/>
+        <image name="tab_pressed.png" width="142" height="35"/>
+        <image name="thumb_noimg.png" width="64" height="66"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

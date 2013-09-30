@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="SQp-DI-hom">
+    <dependencies>
+        <deployment defaultVersion="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Mg Download ListVC i Pad-->
+        <scene sceneID="sJL-vf-xmU">
+            <objects>
+                <viewController id="SQp-DI-hom" customClass="mgDownloadListVC_iPad" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eEW-il-9Qa">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vPI-FU-gmr">
+                                <rect key="frame" x="0.0" y="44" width="1024" height="724"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="downlistCell" rowHeight="63" id="h6t-Yy-xTa">
+                                        <rect key="frame" x="0.0" y="22" width="1024" height="63"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h6t-Yy-xTa" id="WMG-dE-4kS">
+                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="63"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg_white.png" id="u4j-nX-QyN">
+                                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="63"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="cellList.png" id="XAo-k3-5Wf">
+                                                    <rect key="frame" x="0.0" y="63" width="1024" height="1"/>
+                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleToFill" id="ub3-lJ-PeU">
+                                                    <rect key="frame" x="15" y="15" width="26" height="16"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="c5h-hw-fro">
+                                                    <rect key="frame" x="46" y="12" width="900" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="최종수강일" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OYp-ha-hZH">
+                                                    <rect key="frame" x="46" y="35" width="70" height="14"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" text="2013-07-01" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XkJ-Z4-Oeb">
+                                                    <rect key="frame" x="110" y="35" width="88" height="14"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                    <color key="textColor" red="0.039215686270000001" green="0.38823529410000002" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="ico_click.png" id="OVq-lG-jg5">
+                                                    <rect key="frame" x="1001" y="27" width="8" height="10"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" id="Ej3-Kb-dt6">
+                                <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg_nolist.png" id="9o3-uW-628">
+                                        <rect key="frame" x="352" y="73" width="320" height="416"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89803921568627454" green="0.9137254901960784" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" id="83L-Jr-k1u">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="19" maxX="0.0" maxY="-19"/>
+                                <items>
+                                    <navigationItem title="강좌 보관함" id="M82-y8-Mbn"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="downloadListTable" destination="vPI-FU-gmr" id="t8H-W9-5gt"/>
+                        <outlet property="navigationBar" destination="83L-Jr-k1u" id="UQV-q9-3w2"/>
+                        <outlet property="noItemView" destination="Ej3-Kb-dt6" id="sHk-fY-E3h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vKf-JU-0yz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="170" y="-171"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_nolist.png" width="320" height="416"/>
+        <image name="bg_white.png" width="320" height="70"/>
+        <image name="cellList.png" width="640" height="2"/>
+        <image name="ico_click.png" width="16" height="18"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

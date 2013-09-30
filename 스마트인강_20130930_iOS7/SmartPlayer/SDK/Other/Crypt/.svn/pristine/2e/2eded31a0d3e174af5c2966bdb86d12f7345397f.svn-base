@@ -1,0 +1,292 @@
+#import "Cipher.h"  
+#import "NSDataExtentions.h"
+#import "SecKeyWrapper.h"
+@implementation Cipher  
+
+@synthesize cipherKey;  
+
+- (Cipher *) initWithKey:(NSString *) key {  
+    self = [super init];  
+    if (self) {  
+        [self setCipherKey:key];  
+    }  
+    return self;  
+}  
+
+-(void) dealloc
+{
+	[cipherKey release];
+	[super dealloc];
+}
+
+- (NSData *) encrypt:(NSData *) plainText {  
+    return [self transform:kCCEncrypt data:plainText];  
+}  
+
+- (NSData *) decrypt:(NSData *) cipherText {  
+    return [self transform:kCCDecrypt data:cipherText];  
+}  
+
+- (NSString *) encryptToString:(NSString *) plainText
+{
+	
+	const void *vplainText;
+	size_t plainTextBufferSize;
+	
+	plainTextBufferSize = [plainText length];
+	vplainText = (const void *) [plainText UTF8String];
+	
+	CCCryptorStatus ccStatus;
+	uint8_t *bufferPtr = NULL;
+	size_t bufferPtrSize = 0;
+	size_t movedBytes =0;
+	
+	bufferPtrSize = (plainTextBufferSize + kCCBlockSizeAES128) & ~(kCCBlockSizeAES128 - 1);
+	bufferPtr = malloc( bufferPtrSize * sizeof(uint8_t));
+	memset((void *)bufferPtr, 0x0, bufferPtrSize);
+	// memset((void *) iv, 0x0, (size_t) sizeof(iv));
+	
+	
+	
+	const void *vkey = (const void *) [cipherKey UTF8String];
+	
+	
+	ccStatus = 
+	CCCrypt(kCCEncrypt, 
+			kCCAlgorithmAES128, 
+			kCCOptionPKCS7Padding|kCCOptionECBMode ,
+			vkey, 
+			kCCKeySizeAES128,
+			NULL, 
+			vplainText, 
+			plainTextBufferSize,
+			(void *)bufferPtr, 
+			bufferPtrSize,
+			&movedBytes);
+	
+	
+	
+	
+	NSData *tmp = [NSData dataWithBytes:(const void *)bufferPtr length:(NSUInteger)movedBytes];
+	free(bufferPtr);
+	return [tmp base64Encoding]; //[self Base64Encode:tmp];
+}
+
+- (NSData *) decryptToString:(NSString *) encryptedText
+{
+	
+	const void *vplainText;
+	size_t plainTextBufferSize;
+	
+	plainTextBufferSize = [encryptedText length];
+	vplainText = (const void *) [encryptedText UTF8String];
+	
+	CCCryptorStatus ccStatus;
+	uint8_t *bufferPtr = NULL;
+	size_t bufferPtrSize = 0;
+	size_t movedBytes =0;
+	
+	bufferPtrSize = (plainTextBufferSize + kCCBlockSize3DES) & ~(kCCBlockSize3DES - 1);
+	bufferPtr = malloc( bufferPtrSize * sizeof(uint8_t));
+	memset((void *)bufferPtr, 0x0, bufferPtrSize);
+	// memset((void *) iv, 0x0, (size_t) sizeof(iv));
+	
+	
+	
+	const void *vkey = (const void *) [cipherKey UTF8String];
+	
+	
+	ccStatus = 
+	CCCrypt(kCCDecrypt, 
+			kCCAlgorithmAES128, 
+			kCCOptionPKCS7Padding|kCCOptionECBMode ,
+			vkey, 
+			kCCKeySizeAES128,
+			NULL, 
+			vplainText, 
+			plainTextBufferSize,
+			(void *)bufferPtr, 
+			bufferPtrSize,
+			&movedBytes);
+	
+	
+	
+	
+	NSData *tmp = [NSData dataWithBytes:(const void *)bufferPtr length:(NSUInteger)movedBytes];
+	free(bufferPtr);
+	return tmp; //[self Base64Encode:tmp];
+}
+
+- (NSString *) decryptAES:(NSString *) plainText
+{
+    char * key = [cipherKey UTF8String];  
+    NSData * symmetricKey = [NSData dataWithBytes:key length:16];  
+    
+    CCOptions pad = kCCOptionECBMode;  
+    
+    //NSString *responseData = [[NSString alloc] initWithData:[NSData dataWithBase64EncodedString:plainText] encoding:NSUTF8StringEncoding];
+    NSData *d = [[SecKeyWrapper sharedWrapper] doCipher:[NSData dataWithBase64EncodedString:plainText]  
+                                                    key:symmetricKey  
+                                                context:kCCDecrypt  
+                                                padding:&pad];  
+   // [responseData release];  
+    
+    // if the data was a string, you can get the decrypted string like this  
+    
+    return [[[NSString alloc] initWithData:d  
+                                          encoding:NSUTF8StringEncoding] autorelease]; 
+}
+
+- (NSString *) encryptAES:(NSString *) plainText
+{
+    char * key = [cipherKey UTF8String];  
+    NSData * symmetricKey = [NSData dataWithBytes:key length:16];  
+    
+    CCOptions pad = kCCOptionECBMode;  
+    
+    
+    NSData *d = [[SecKeyWrapper sharedWrapper] doCipher:[plainText dataUsingEncoding:NSUTF8StringEncoding]  
+                                                    key:symmetricKey  
+                                                context:kCCEncrypt  
+                                                padding:&pad];  
+
+    
+    return [d base64Encoding];
+}
+
+
+
+- (NSData *) transform:(CCOperation) encryptOrDecrypt data:(NSData *) inputData {  
+	
+    // kCCKeySizeAES128 = 16 bytes  
+    // CC_MD5_DIGEST_LENGTH = 16 bytes  
+    NSData* secretKey = [cipherKey dataUsingEncoding:NSUTF8StringEncoding]; //[Cipher md5:cipherKey];  
+	
+    CCCryptorRef cryptor = NULL;  
+    CCCryptorStatus status = kCCSuccess;  
+	
+    uint8_t iv[kCCBlockSizeDES];  
+    memset((void *) iv, 0x0, (size_t) sizeof(iv));  
+	
+	//DES/ECB/PKCS5Padding
+    status = CCCryptorCreate(encryptOrDecrypt, kCCAlgorithmDES, kCCOptionECBMode | kCCOptionPKCS7Padding,  
+                             [secretKey bytes], kCCKeySizeDES, iv, &cryptor);  
+	
+    if (status != kCCSuccess) {  
+        return nil;  
+    }  
+	
+    size_t bufsize = CCCryptorGetOutputLength(cryptor, (size_t)[inputData length], true);  
+	
+    void * buf = malloc(bufsize * sizeof(uint8_t));  
+    memset(buf, 0x0, bufsize);  
+	
+    size_t bufused = 0;  
+    size_t bytesTotal = 0;  
+	
+    status = CCCryptorUpdate(cryptor, [inputData bytes], (size_t)[inputData length],  
+                             buf, bufsize, &bufused);  
+	
+    if (status != kCCSuccess) {  
+        free(buf);  
+        CCCryptorRelease(cryptor);  
+        return nil;  
+    }  
+	
+    bytesTotal += bufused;  
+	
+    status = CCCryptorFinal(cryptor, buf + bufused, bufsize - bufused, &bufused);  
+	
+    if (status != kCCSuccess) {  
+        free(buf);  
+        CCCryptorRelease(cryptor);  
+        return nil;  
+    }  
+	
+    bytesTotal += bufused;  
+	
+    CCCryptorRelease(cryptor);  
+	
+    return [NSData dataWithBytesNoCopy:buf length:bytesTotal];  
+}  
+
+-(NSString *)Base64Encode:(NSData *)data{
+	//Point to start of the data and set buffer sizes
+	int inLength = [data length];
+	int outLength = ((((inLength * 4)/3)/4)*4) + (((inLength * 4)/3)%4 ? 4 : 0);
+	const char *inputBuffer = [data bytes];
+	char *outputBuffer = malloc(outLength);
+	outputBuffer[outLength] = 0;
+	
+	//64 digit code
+	static char Encode[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+	
+	//start the count
+	int cycle = 0;
+	int inpos = 0;
+	int outpos = 0;
+	char temp;
+	
+	//Pad the last to bytes, the outbuffer must always be a multiple of 4
+	outputBuffer[outLength-1] = '=';
+	outputBuffer[outLength-2] = '=';
+	
+	/* http://en.wikipedia.org/wiki/Base64
+	 Text content   M           a           n
+	 ASCII          77          97          110
+	 8 Bit pattern  01001101    01100001    01101110
+	 
+	 6 Bit pattern  010011  010110  000101  101110
+	 Index          19      22      5       46
+	 Base64-encoded T       W       F       u
+	 */
+	
+	
+	while (inpos < inLength){
+		switch (cycle) {
+			case 0:
+				outputBuffer[outpos++] = Encode[(inputBuffer[inpos]&0xFC)>>2];
+				cycle = 1;
+				break;
+			case 1:
+				temp = (inputBuffer[inpos++]&0x03)<<4;
+				outputBuffer[outpos] = Encode[temp];
+				cycle = 2;
+				break;
+			case 2:
+				outputBuffer[outpos++] = Encode[temp|(inputBuffer[inpos]&0xF0)>> 4];
+				temp = (inputBuffer[inpos++]&0x0F)<<2;
+				outputBuffer[outpos] = Encode[temp];
+				cycle = 3;                  
+				break;
+			case 3:
+				outputBuffer[outpos++] = Encode[temp|(inputBuffer[inpos]&0xC0)>>6];
+				cycle = 4;
+				break;
+			case 4:
+				outputBuffer[outpos++] = Encode[inputBuffer[inpos++]&0x3f];
+				cycle = 0;
+				break;                          
+			default:
+				cycle = 0;
+				break;
+		}
+	}
+	NSString *pictemp = [NSString stringWithUTF8String:outputBuffer];
+	free(outputBuffer); 
+	return pictemp;
+	
+}
+
++ (NSData *) md5:(NSString *) stringToHash {  
+	
+    const char *src = [stringToHash UTF8String];  
+	
+    unsigned char result[CC_MD5_DIGEST_LENGTH];  
+	
+    CC_MD5(src, strlen(src), result);  
+	
+    return [NSData dataWithBytes:result length:CC_MD5_DIGEST_LENGTH];  
+}  
+
+@end  

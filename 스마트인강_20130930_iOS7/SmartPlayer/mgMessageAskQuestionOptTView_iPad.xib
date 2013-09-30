@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="IXv-wM-I0V" customClass="mgMessageAskQuestionOptTView_iPad">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="480"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="P_bg_popup.png" id="cdq-EP-Eus">
+                    <rect key="frame" x="-20" y="-20" width="396" height="526"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대상선택" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1R9-ac-7DJ">
+                    <rect key="frame" x="0.0" y="0.0" width="350" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="0tB-FH-uvK">
+                    <rect key="frame" x="0.0" y="44" width="350" height="40"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="zFk-wo-vGs">
+                    <rect key="frame" x="0.0" y="84" width="350" height="42"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HhG-Dl-hAo">
+                    <rect key="frame" x="10" y="49" width="160" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="15"/>
+                    <inset key="contentEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="이름으로 찾기" backgroundImage="P_pop_tab_normal.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="P_pop_tab_pressed.png">
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </state>
+                    <connections>
+                        <action selector="nameSearchBtn:" destination="IXv-wM-I0V" eventType="touchUpInside" id="SnU-m5-G3N"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QsH-tS-RBm">
+                    <rect key="frame" x="180" y="49" width="160" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="15"/>
+                    <inset key="contentEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="아이디로 찾기" backgroundImage="P_pop_tab_normal.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" backgroundImage="P_pop_tab_pressed.png">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="idSearchBtn:" destination="IXv-wM-I0V" eventType="touchUpInside" id="McY-uw-sbp"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cXA-et-SZJ">
+                    <rect key="frame" x="297" y="90" width="43" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" backgroundImage="btn_search_normal.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" backgroundImage="btn_search_pressed.png"/>
+                    <connections>
+                        <action selector="searchBtn:" destination="IXv-wM-I0V" eventType="touchUpInside" id="ge5-mh-T4h"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="skj-Zv-Ytg">
+                    <rect key="frame" x="0.0" y="126" width="350" height="354"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.82745098039999998" green="0.90588235289999997" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="IXv-wM-I0V" id="Elz-Qj-gAJ"/>
+                        <outlet property="delegate" destination="IXv-wM-I0V" id="n8Q-ne-Um3"/>
+                    </connections>
+                </tableView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" id="bU5-Y9-oJs" customClass="mgInputTextField">
+                    <rect key="frame" x="13" y="90" width="276" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="0.82745098039999998" green="0.90588235289999997" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="_imgBack1" destination="0tB-FH-uvK" id="uuO-IV-nqj"/>
+                <outlet property="_imgBack2" destination="zFk-wo-vGs" id="Yi4-5Q-OkP"/>
+                <outlet property="_table" destination="skj-Zv-Ytg" id="qXo-PZ-hu8"/>
+                <outlet property="idSearchBtn" destination="QsH-tS-RBm" id="eGo-mt-xA5"/>
+                <outlet property="nameSearchBtn" destination="HhG-Dl-hAo" id="X2i-Tv-xGO"/>
+                <outlet property="searchText" destination="bU5-Y9-oJs" id="WAj-GP-lfN"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="P_bg_popup.png" width="792" height="1052"/>
+        <image name="P_pop_tab_normal.png" width="320" height="68"/>
+        <image name="P_pop_tab_pressed.png" width="320" height="68"/>
+        <image name="btn_search_normal.png" width="86" height="60"/>
+        <image name="btn_search_pressed.png" width="86" height="60"/>
+    </resources>
+</document>

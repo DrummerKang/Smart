@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="opS-c5-Wc8">
+    <dependencies>
+        <deployment defaultVersion="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Mg First ProfileVC - 내 정보 설정-->
+        <scene sceneID="8Bt-Xc-C9m">
+            <objects>
+                <viewController storyboardIdentifier="mgFirstProfileVC" title="내 정보 설정" id="opS-c5-Wc8" customClass="mgFirstProfileVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iAo-gq-bns">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bg_profile_set.png" id="1s7-R0-j9C">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="thumb_profile.png" id="TeR-aw-33O">
+                                <rect key="frame" x="15" y="80" width="103" height="103"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="nick_line.png" highlightedImage="nick_line.png" id="Ip6-E1-W56">
+                                <rect key="frame" x="180" y="124" width="130" height="1"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Euw-Aj-zYa">
+                                <rect key="frame" x="15" y="80" width="103" height="103"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" backgroundImage="clean_nor.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="clean_sel.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="profileImageBtn:" destination="opS-c5-Wc8" eventType="touchUpInside" id="fAS-cT-rFS"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="닉네임을 입력하세요." minimumFontSize="17" id="3KV-XI-mqU">
+                                <rect key="frame" x="190" y="93" width="120" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="아이디" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RW2-XG-TXI">
+                                <rect key="frame" x="132" y="134" width="46" height="36"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="닉네임" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zHg-4c-VaU">
+                                <rect key="frame" x="132" y="93" width="46" height="36"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="나의 목표" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ktu-va-9oR">
+                                <rect key="frame" x="20" y="212" width="285" height="15"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="bg_white.png" id="EgS-cS-6G4">
+                                <rect key="frame" x="0.0" y="567" width="320" height="1"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="VWm-vj-bo9" customClass="mgTextView">
+                                <rect key="frame" x="15" y="243" width="290" height="80"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="opS-c5-Wc8" id="gl4-2Y-ag8"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="M4d-qY-W9a">
+                                <rect key="frame" x="224" y="352" width="81" height="32"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <inset key="contentEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="건너뛰기" backgroundImage="btn_jump_normal.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="btn_jump_pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipBtn:" destination="opS-c5-Wc8" eventType="touchUpInside" id="big-Yp-HM3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u6z-uc-KMX">
+                                <rect key="frame" x="190" y="134" width="120" height="36"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bl_black_dot.png" id="fas-oX-SA5">
+                                <rect key="frame" x="126" y="111" width="2" height="2"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bl_black_dot.png" id="6JB-Lx-k99">
+                                <rect key="frame" x="126" y="153" width="2" height="2"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="bl_black_dot.png" id="ZYo-Xf-yKu">
+                                <rect key="frame" x="15" y="219" width="2" height="2"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" id="zQz-4v-Zc0">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="19.899999999999999" maxX="0.0" maxY="-19.899999999999999"/>
+                                <items>
+                                    <navigationItem title="내 정보 설정" id="rKH-Zx-tlh"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nD2-Wy-McK">
+                                <rect key="frame" x="255" y="28" width="60" height="30"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <state key="normal" title="저장" backgroundImage="btn_top_normal.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="btn_top_pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveBtn:" destination="opS-c5-Wc8" eventType="touchUpInside" id="Nlt-LT-RNO"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kgb-k8-GIk">
+                                <rect key="frame" x="255" y="28" width="60" height="30"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <state key="normal" title="완료" backgroundImage="btn_top_normal.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="btn_top_pressed.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="completeBtn:" destination="opS-c5-Wc8" eventType="touchUpInside" id="A8K-Mt-sNf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="bl1" destination="fas-oX-SA5" id="mFe-4G-t7y"/>
+                        <outlet property="bl2" destination="6JB-Lx-k99" id="3q4-Wq-fJq"/>
+                        <outlet property="bl3" destination="ZYo-Xf-yKu" id="Pl6-lm-Ux5"/>
+                        <outlet property="completeBtn" destination="kgb-k8-GIk" id="f6r-T9-Lhy"/>
+                        <outlet property="firstNavigationBar" destination="zQz-4v-Zc0" id="kPF-3G-zJL"/>
+                        <outlet property="imagePhoto" destination="TeR-aw-33O" id="wGC-Dj-Siu"/>
+                        <outlet property="myGoal" destination="VWm-vj-bo9" id="UPV-t6-Vj7"/>
+                        <outlet property="nickName" destination="3KV-XI-mqU" id="ngR-oc-B5Q"/>
+                        <outlet property="saveBtn" destination="nD2-Wy-McK" id="do6-7c-Oxi"/>
+                        <outlet property="textBgImage" destination="EgS-cS-6G4" id="Hv1-Ej-862"/>
+                        <outlet property="userId" destination="u6z-uc-KMX" id="3kD-6A-lh7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zji-Pr-NgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="423" y="161"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg_profile_set.png" width="640" height="832"/>
+        <image name="bg_white.png" width="320" height="70"/>
+        <image name="bl_black_dot.png" width="2" height="2"/>
+        <image name="btn_jump_normal.png" width="162" height="63"/>
+        <image name="btn_jump_pressed.png" width="162" height="63"/>
+        <image name="btn_top_normal.png" width="60" height="31"/>
+        <image name="btn_top_pressed.png" width="60" height="31"/>
+        <image name="clean_nor.png" width="20" height="20"/>
+        <image name="clean_sel.png" width="768" height="381"/>
+        <image name="nick_line.png" width="260" height="2"/>
+        <image name="thumb_profile.png" width="206" height="206"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

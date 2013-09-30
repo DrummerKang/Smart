@@ -1,0 +1,17 @@
+#import <UIKit/UIKit.h>
+#import <CommonCrypto/CommonCryptor.h>
+#import <CommonCrypto/CommonDigest.h>
+#import <Security/Security.h>
+
+@interface CryptoHelper : NSObject
+{
+	NSData *symmetricKey;
+}
+
++ (CryptoHelper *)sharedInstance;
+
+- (NSString*)encryptString:(NSString*)string;
+//- (NSString*)decryptString:(NSString*)string;
+
+@end
+

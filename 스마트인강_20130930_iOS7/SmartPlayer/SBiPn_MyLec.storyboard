@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="4DO-md-QLh">
+    <dependencies>
+        <deployment defaultVersion="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Mg My LecVC-->
+        <scene sceneID="y9J-jQ-Usw">
+            <objects>
+                <viewController storyboardIdentifier="mgMyLecVC" id="4DO-md-QLh" customClass="mgMyLecVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WF0-Bs-rE0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="196" sectionHeaderHeight="22" sectionFooterHeight="22" id="EEg-ZN-Ljj">
+                                <rect key="frame" x="0.0" y="44" width="320" height="436"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.91372549020000005" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="-40" maxX="0.0" maxY="40"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell_PauseLec" rowHeight="210" id="yAZ-6m-uvg">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="210"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yAZ-6m-uvg" id="O4i-XR-gMc">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="210"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="box_con05.png" id="jKj-Jn-0Hf" userLabel="셀 배경">
+                                                    <rect key="frame" x="6" y="7" width="310" height="204"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" image="thumb_noimg.png" id="wEk-IT-3Rg" userLabel="선생님 사진">
+                                                    <rect key="frame" x="17" y="17" width="52" height="52"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" image="ico_korean.png" id="zLG-dW-30q" userLabel="강좌종료아이콘">
+                                                    <rect key="frame" x="6" y="7" width="41" height="40"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="ooo 선생님" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rUK-mc-3JX">
+                                                    <rect key="frame" x="79" y="17" width="141" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                    <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" text="강좌 제목" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BcJ-UQ-iAj">
+                                                    <rect key="frame" x="79" y="36" width="220" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                    <color key="textColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" image="_btn_freeLec.png" id="hgd-7S-P3R" userLabel="다음버튼">
+                                                    <rect key="frame" x="160" y="17" width="45" height="16"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" image="ico_bell.png" id="56T-SH-f1W">
+                                                    <rect key="frame" x="22" y="181" width="10" height="12"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" tag="13" contentMode="scaleToFill" image="ico_lock.png" id="ja5-tK-eua">
+                                                    <rect key="frame" x="22" y="181" width="11" height="14"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="left" text="일시정지 중입니다." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vgu-lq-9eU">
+                                                    <rect key="frame" x="36" y="168" width="269" height="38"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                    <color key="textColor" red="0.56078431370000004" green="0.64313725489999995" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="나의 학습 진도율" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MlI-nw-KKh">
+                                                    <rect key="frame" x="17" y="114" width="290" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                    <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <view tag="9" contentMode="scaleToFill" id="FyB-aw-dSq" customClass="mgProgressBar">
+                                                    <rect key="frame" x="17" y="137" width="290" height="22"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="8" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OUp-yD-iim">
+                                                    <rect key="frame" x="17" y="84" width="160" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                    <color key="textColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="종료일 : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fhr-tS-nOM">
+                                                    <rect key="frame" x="194" y="84" width="42" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                    <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="12" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2oV-JY-OUY">
+                                                    <rect key="frame" x="237" y="84" width="66" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="11"/>
+                                                    <color key="textColor" red="0.039215686270000001" green="0.38823529410000002" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="L0W-a1-39d">
+                                                    <rect key="frame" x="6" y="7" width="310" height="204"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <state key="normal">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.8980392157" green="0.91372549020000005" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell_UnpauseLec" rowHeight="180" id="Aad-Ml-Hbz">
+                                        <rect key="frame" x="0.0" y="232" width="320" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Aad-Ml-Hbz" id="HJY-uZ-TdV">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="box_con03.png" id="OO1-tA-7Vu" userLabel="셀 배경">
+                                                    <rect key="frame" x="6" y="7" width="310" height="172"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFill" image="thumb_noimg.png" id="N5w-rO-OXq" userLabel="선생님 사진">
+                                                    <rect key="frame" x="17" y="17" width="52" height="52"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" image="ico_korean.png" id="8am-Wa-Xcx" userLabel="강좌종료아이콘">
+                                                    <rect key="frame" x="6" y="7" width="41" height="41"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" text="ooo 선생님" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wx9-YQ-fZD">
+                                                    <rect key="frame" x="79" y="18" width="141" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                    <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" text="강좌 제목" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A2K-tP-4Dv">
+                                                    <rect key="frame" x="79" y="37" width="220" height="33"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                    <color key="textColor" red="0.34901960780000002" green="0.34901960780000002" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" image="_btn_freeLec.png" id="HRf-kg-Cz9" userLabel="다음버튼">
+                                                    <rect key="frame" x="160" y="18" width="45" height="16"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XFY-M3-uW2">
+                                                    <rect key="frame" x="36" y="135" width="269" height="38"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                    <color key="textColor" red="0.56078431370000004" green="0.64313725489999995" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="8" contentMode="left" text="나의 학습 진도율" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fhl-iD-v8x">
+                                                    <rect key="frame" x="17" y="85" width="288" height="20"/>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                    <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <view tag="9" contentMode="scaleToFill" horizontalHuggingPriority="2" id="eTQ-m8-XV4" customClass="mgProgressBar">
+                                                    <rect key="frame" x="17" y="108" width="290" height="22"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" image="ico_bell.png" id="9Af-Dh-dCx">
+                                                    <rect key="frame" x="22" y="148" width="10" height="12"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" tag="13" contentMode="scaleToFill" image="ico_lock.png" id="qf9-lk-plc">
+                                                    <rect key="frame" x="22" y="148" width="11" height="14"/>
+                                                </imageView>
+                                                <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0B8-h5-A1e">
+                                                    <rect key="frame" x="6" y="7" width="310" height="170"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <state key="normal">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.8980392157" green="0.91372549020000005" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="4DO-md-QLh" id="H20-4S-o3a"/>
+                                    <outlet property="delegate" destination="4DO-md-QLh" id="wgo-Dv-w62"/>
+                                </connections>
+                            </tableView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="bg_noclass.png" id="xsr-Qz-RYe">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" id="Iig-7H-Ai0">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <items>
+                                    <navigationItem title="수강중인 강좌" id="Fr9-dP-xwI"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Zgm-Gq-y3b">
+                                <rect key="frame" x="5" y="20" width="46" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="20" maxX="0.0" maxY="-20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" backgroundImage="btn_top_menu_normal.png">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="btn_top_menu_pressed.png"/>
+                                <connections>
+                                    <action selector="menuBtn:" destination="4DO-md-QLh" eventType="touchUpInside" id="NNV-AQ-Icc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.8980392157" green="0.91372549020000005" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="myLecNavigationBar" destination="Iig-7H-Ai0" id="zUe-0o-Hhh"/>
+                        <outlet property="myLecTable" destination="EEg-ZN-Ljj" id="z1S-af-I9n"/>
+                        <outlet property="noBgImage" destination="xsr-Qz-RYe" id="83d-CP-Js2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WEZ-0t-a0T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-558" y="95"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="_btn_freeLec.png" width="45" height="16"/>
+        <image name="bg_noclass.png" width="320" height="416"/>
+        <image name="box_con03.png" width="620" height="344"/>
+        <image name="box_con05.png" width="620" height="408"/>
+        <image name="btn_top_menu_normal.png" width="46" height="44"/>
+        <image name="btn_top_menu_pressed.png" width="46" height="44"/>
+        <image name="ico_bell.png" width="10" height="12"/>
+        <image name="ico_korean.png" width="41" height="41"/>
+        <image name="ico_lock.png" width="11" height="14"/>
+        <image name="thumb_noimg.png" width="64" height="66"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
